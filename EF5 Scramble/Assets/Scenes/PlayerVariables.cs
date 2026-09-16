@@ -18,12 +18,15 @@ public class PlayerVariables
 
         //This constructs wife
         //She has the same stats as player character
+        //DO WE WANT KIDS???
+        //YESSSSSSS!!!!!
         //however the wife doesn't have to live for you to win the round. 
         Wife wife = new Wife();
         wife.fearMeter = 0;
         wife.hungry = false;
         wife.thirsty = false;
         wife.isAlive = true;
+
     }
 }
 
