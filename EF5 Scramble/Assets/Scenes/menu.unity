@@ -205,8 +205,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 253059928}
         m_TargetAssemblyTypeName: nextScene, Assembly-CSharp
-        m_MethodName: LoadSceneByName
-        m_Mode: 5
+        m_MethodName: MoveButton
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -214,7 +214,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
 --- !u!114 &253059926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -262,9 +262,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 253059923}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9eb585db9e5d32044875d343ed256fc8, type: 3}
+  m_Script: {fileID: 11500000, guid: 56f086b3f0fbe3e41a5536c4a50d75e7, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: '::'
+  m_EditorClassIdentifier: Assembly-CSharp::nextScene
 --- !u!1 &520207724
 GameObject:
   m_ObjectHideFlags: 0
@@ -451,7 +451,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 867118593}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9eb585db9e5d32044875d343ed256fc8, type: 3}
+  m_Script: {fileID: 11500000, guid: 56f086b3f0fbe3e41a5536c4a50d75e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
 --- !u!114 &867118596

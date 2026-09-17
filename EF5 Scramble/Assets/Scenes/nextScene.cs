@@ -19,7 +19,7 @@ public class nextScene : MonoBehaviour
         RectTransform rt = GetComponent<RectTransform>();
         amount = 20;
 
-        rt.anchoredPosition = new Vector2(rt.position.x, rt.position.y + amount);
+        rt.anchoredPosition = new Vector2(rt.anchoredPosition.x, rt.anchoredPosition.y + amount);
         
     }
 }
