@@ -1,8 +1,10 @@
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering;
-
-public class PlayerVariables
+using UnityEngine.UI;
+using UnityEditor;
+public class PlayerVariables : MonoBehaviour
 {
     public static void main()
     {
@@ -50,4 +52,44 @@ public class Variables
 public class Wife : Variables
 {
     
+}
+public class waterBottle : Variables
+{
+    public Button waterButton;
+    public void drinkThatWater()
+    {
+        /*if(waterButton is clicked)*/
+        {
+            if (thirsty == true)
+            {
+                thirsty = false;
+                EditorUtility.DisplayDialog("Status","You drank some water, you are no longer thirsty", "OK");
+            }
+            else
+            {
+                EditorUtility.DisplayDialog("Status", "You aren't thristy, you shouldn't waste water.", "OK");
+            }
+        }
+
+    }
+
+}
+public class snackSupplies : Variables
+{
+    public Button snackButton;
+    public void eatThatSnack()
+    {
+        /*if(snackButton is clicked)*/
+        {
+            if (hungry == true)
+            {
+                hungry = false;
+                EditorUtility.DisplayDialog("Status", "You ate some food, you are no longer hungry", "OK");
+            }
+            else
+            {
+                EditorUtility.DisplayDialog("Status", "You aren't hungry, you shouldn't waste food.", "OK");
+            }
+        }
+    }
 }
