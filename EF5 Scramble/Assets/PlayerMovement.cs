@@ -13,7 +13,8 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        _moveDirection = move.action.ReadValue<Vector2>();
+        if(move.action.ReadValue<Vector2>()!=null)
+            _moveDirection = move.action.ReadValue<Vector2>();
     }
 
     private void FixedUpdate()

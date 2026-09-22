@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class ColliderTest : MonoBehaviour
 {
@@ -7,6 +8,8 @@ public class ColliderTest : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        Renderer renderer = GetComponent<Renderer>();
+        renderer.material.color = Color.blue;
     }
 
     // Update is called once per frame
