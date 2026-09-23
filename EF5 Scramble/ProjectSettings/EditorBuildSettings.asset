@@ -11,14 +11,14 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/menu.unity
     guid: 3591d8ba2710c1c4f83799134e4a6290
-<<<<<<< HEAD
-=======
-  - enabled: 1
-    path: Assets/Scenes/typing.unity
-    guid: b17e1db468ca7ee43a948f7479e4597f
   - enabled: 1
     path: Assets/Scenes/Main Scene.unity
     guid: a8bf9f75e0a5ef14dab947ed46d3e221
->>>>>>> Hayden's-branch
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: e0a63a7dec673b44086fe9fa89fce6c9
+  - enabled: 1
+    path: Assets/Scenes/typing.unity
+    guid: 3ea5c2445bca4a541a2c6724dcb1da65
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
