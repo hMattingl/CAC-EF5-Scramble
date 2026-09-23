@@ -5,12 +5,6 @@ public class GrabObjects : MonoBehaviour
 {
     //Position above player's head
     [SerializeField] private Transform grabPoint;
-    //Position to player right
-    [SerializeField] private Transform RightDrop;
-    //Position of player's bottom
-    [SerializeField] private Transform DownDrop;
-    //Position to player left
-    [SerializeField] private Transform LeftDrop;
     //How far can I grab
     [SerializeField] private float grabRadius = 1.5f;
     //drop object this far from player
@@ -62,25 +56,26 @@ public class GrabObjects : MonoBehaviour
     private void Drop()
     {
 
-        // Places object in front of the direction the player is facing (transform.right)
-        if (movementInput.x < 0f)
+        // Places object in front of the direction the player is moving (transform.right)
+        grabbedObject.transform.SetParent(null);
+
+        if (movementInput != Vector2.zero)
         {
-            grabbedObject.transform.position = LeftDrop.transform.position;
-        }
-        else if (movementInput.x > 0f)
-        {
-            grabbedObject.transform.position = RightDrop.transform.position;
-        }
-        else if (movementInput.y < 0f)
-        {
-            grabbedObject.transform.position = DownDrop.transform.position;
+            // Normalize the vector so diagonal movement drops at the exact same distance as straight lines
+            Vector3 dropDirection = new Vector3(movementInput.x, movementInput.y, 0f).normalized;
+
+            // Position = Player Position + (Direction Vector * Offset Distance)
+            grabbedObject.transform.position = transform.position + (dropDirection * dropOffset);
+
+            Debug.Log($"Dropped item in direction: {dropDirection}");
         }
         else
         {
-            grabbedObject.transform.position = grabPoint.transform.position;
-        }
+            // Fallback: If standing completely still, default to the grabPoint
+            grabbedObject.transform.position = grabPoint.position;
 
-        grabbedObject.transform.SetParent(null);
+            Debug.Log("Dropped item at grab point (Idle)");
+        }
 
         Rigidbody2D rb = grabbedObject.GetComponent<Rigidbody2D>();
         if (rb != null)
