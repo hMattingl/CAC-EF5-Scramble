@@ -308,11 +308,11 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 20
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Main Scene
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
 --- !u!114 &253059926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -362,6 +362,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 56f086b3f0fbe3e41a5536c4a50d75e7, type: 3}
   m_Name: 
+<<<<<<< HEAD
   m_EditorClassIdentifier: '::'
 --- !u!1 &480556645
 GameObject:
@@ -490,6 +491,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec67e2a82b4e301418da98b5091085c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerVariables
+=======
+  m_EditorClassIdentifier: Assembly-CSharp::nextScene
+>>>>>>> Hayden's-branch
 --- !u!1 &520207724
 GameObject:
   m_ObjectHideFlags: 0
@@ -732,7 +736,11 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
+<<<<<<< HEAD
           m_StringArgument: New Scene
+=======
+          m_StringArgument: typing
+>>>>>>> Hayden's-branch
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &867118597
