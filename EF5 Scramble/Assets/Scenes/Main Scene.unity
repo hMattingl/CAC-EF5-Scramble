@@ -612,7 +612,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 5, y: -5}
-  m_SizeDelta: {x: 743.79, y: 300.97998}
+  m_SizeDelta: {x: 820.33, y: 300.98}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1362093212
 MonoBehaviour:
@@ -813,8 +813,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1584625114}
         m_TargetAssemblyTypeName: statsDisplay, Assembly-CSharp
-        m_MethodName: ChangeFearMeter
-        m_Mode: 3
+        m_MethodName: RandomEvent
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
