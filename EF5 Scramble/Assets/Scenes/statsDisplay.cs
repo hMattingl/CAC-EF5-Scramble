@@ -18,13 +18,13 @@ public class statsDisplay : MonoBehaviour
        
         if (fear >= 100)
         {
-            int dataToKeep = fear;
-            StaticData.valueToKeep = dataToKeep; 
+            
            
             SceneManager.LoadScene("GameOver");
             
         }
-
+           int dataToKeep = fear;
+           Static.valueToKeep = dataToKeep;
     }
 
     public void ChangeFearMeter (int ammount)
@@ -32,3 +32,4 @@ public class statsDisplay : MonoBehaviour
         fear = fear + ammount;
     }
 }
+
