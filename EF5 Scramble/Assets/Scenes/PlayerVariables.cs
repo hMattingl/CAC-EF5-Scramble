@@ -7,15 +7,7 @@ using UnityEditor;
 using System.IO;
 using System.Runtime.CompilerServices;
 using Microsoft.Win32.SafeHandles;
-public class PlayerVariables : MonoBehaviour
-{
-    public static void main()
-    {
-        
-
-
-    }
-}
+//public class PlayerVariables : MonoBehaviour
 public class Variables 
 {
     private int fearMeter;
