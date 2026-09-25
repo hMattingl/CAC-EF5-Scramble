@@ -8,8 +8,6 @@ public class ColliderTest : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        Renderer renderer = GetComponent<Renderer>();
-        renderer.material.color = Color.blue;
     }
 
     // Update is called once per frame
@@ -22,22 +20,26 @@ public class ColliderTest : MonoBehaviour
         {
             if(hit.transform.parent==null)
             renderer.material.color = Color.red;
+
+            Item item = other.gameObject.GetComponent<Item>();
+            if (item != null && item.Type == ItemType.Wife)
+            {
+                //This is pretty funny out of context
+                Debug.Log("I detect a wife");
+            }
+            else if (item != null && item.Type == ItemType.Child)
+            {
+                Debug.Log("I detect a child");
+            }
+            else if (item != null && item.Type == ItemType.Radio)
+            {
+                Debug.Log("I detect a radio");
+            }
+            else
+                Debug.Log("I detect a flashlight");
         }
-        if (hit == null)
-        {
+        else
             renderer.material.color = Color.blue;
-
-        }
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        Item item = other.gameObject.GetComponent<Item>();
-
-        if (item != null && item.Type == ItemType.Wife)
-        {
-            Debug.Log("I detect a wife");
-        }
     }
 
 }
