@@ -26,6 +26,18 @@ public class ColliderTest : MonoBehaviour
         if (hit == null)
         {
             renderer.material.color = Color.blue;
+
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Item item = other.gameObject.GetComponent<Item>();
+
+        if (item != null && item.Type == ItemType.Wife)
+        {
+            Debug.Log("I detect a wife");
+        }
+    }
+
 }
