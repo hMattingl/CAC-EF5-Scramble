@@ -33,8 +33,11 @@ public class ColliderTest : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        //Make sure its working
         Debug.Log("DETECTED");
+        //Make an item labeled other attached to the detected game object and search for an Item class within them
         Item item = other.gameObject.GetComponent<Item>();
+        //If our item is filled, and its a wife, and its not parented; log it, destroy, and affirm its accounted for
         if (item != null && item.Type == ItemType.Wife && other.transform.parent == null)
         {
             //This is pretty funny out of context
@@ -43,6 +46,7 @@ public class ColliderTest : MonoBehaviour
             Destroy(other.gameObject);
             WifeNum();
         }
+        //otherwise If our item is filled, and its a child, and its not parented; log it, destroy, and affirm its accounted for
         else if (item != null && item.Type == ItemType.Child && other.transform.parent == null)
         {
             Debug.Log("I detect a child");
@@ -50,6 +54,7 @@ public class ColliderTest : MonoBehaviour
             Destroy(other.gameObject);
             ChildNum();
         }
+        //otherwise If our item is filled, and its a flashlight, and its not parented; log it, destroy, and affirm its accounted for
         else if (item != null && item.Type == ItemType.Flashlight && other.transform.parent == null)
         {
             Debug.Log("I detect a flashlight");
@@ -57,6 +62,7 @@ public class ColliderTest : MonoBehaviour
             Destroy(other.gameObject);
             FlashLNum();
         }
+        //otherwise If our item is filled, and its a radio, and its not parented; log it, destroy, and affirm its accounted for
         else if (item != null && item.Type == ItemType.Radio && other.transform.parent == null)
         {
             Debug.Log("I detect a radio");
