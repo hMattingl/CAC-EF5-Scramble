@@ -12,9 +12,9 @@ public class PlayerVariables : MonoBehaviour
 {
     private int fearMeter;
 
-    public void initialFearMeter()
+    public int getFearMeter()
     {
-        fearMeter = 0; 
+        return fearMeter;
     }
     public void addFearMeter()
     {
