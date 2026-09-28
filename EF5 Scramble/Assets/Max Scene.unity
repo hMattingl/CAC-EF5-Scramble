@@ -549,8 +549,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< HEAD
-=======
 --- !u!114 &728828150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -564,7 +562,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GiveMeType
   itemType: 0
->>>>>>> 171ba3b374a0eaac5c091b82ec3c49fc8df36b33
 --- !u!50 &728828151
 Rigidbody2D:
   serializedVersion: 5
@@ -1718,8 +1715,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   itemType: 2
-<<<<<<< HEAD
-=======
 --- !u!1 &1360511835
 GameObject:
   m_ObjectHideFlags: 0
@@ -1901,7 +1896,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
->>>>>>> 171ba3b374a0eaac5c091b82ec3c49fc8df36b33
 --- !u!1 &1889512405
 GameObject:
   m_ObjectHideFlags: 0
