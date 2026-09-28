@@ -7,13 +7,13 @@ using UnityEngine.Experimental.GlobalIllumination;
 
 public class StatsManager : MonoBehaviour
 {
-    [Header("Player Stats")]
-
-
-    [Header("Spouse Stats")]
-    public int num;
+    [Header("Character Stats")]
+    int fear; 
+    
+   
 }
-//This is the stats that will be shared between all of the characters. The player, the children, and the spouse.
+
+/*This is the stats that will be shared between all of the characters. The player, the children, and the spouse.
 public class variables
 {
     public int fearMeter;
@@ -39,5 +39,5 @@ public class CharacterVariables
         main.fearMeter = 0; 
 
 
-    }
-}
+    
+}}*/
