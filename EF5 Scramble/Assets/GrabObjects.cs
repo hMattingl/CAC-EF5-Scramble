@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -6,12 +5,6 @@ public class GrabObjects : MonoBehaviour
 {
     //Position above player's head
     [SerializeField] private Transform grabPoint;
-    //Position above player's head
-    [SerializeField] private Transform LeftPoint;
-    //Position above player's head
-    [SerializeField] private Transform RightPoint;
-    //Position above player's head
-    [SerializeField] private Transform DownPoint;
     //How far can I grab
     [SerializeField] private float grabRadius = 1.5f;
     //drop object this far from player
@@ -23,11 +16,6 @@ public class GrabObjects : MonoBehaviour
 
     private GameObject grabbedObject;
 
-    private Boolean rightKey = false;
-    private Boolean leftKey = false;
-    private Boolean downKey = false;
-    private Boolean upKey = false;
-
     void Update()
     {
         if (Keyboard.current.spaceKey.wasPressedThisFrame)
@@ -37,11 +25,6 @@ public class GrabObjects : MonoBehaviour
             else
                 Drop();
         }
-
-        leftKey = Keyboard.current.aKey.isPressed;
-        rightKey = Keyboard.current.dKey.isPressed;
-        downKey = Keyboard.current.sKey.isPressed;
-        upKey = Keyboard.current.wKey.isPressed;
 
         // Keep grabbed object attached to the grabPoint
         if (grabbedObject != null)
@@ -64,34 +47,35 @@ public class GrabObjects : MonoBehaviour
             grabbedObject.transform.SetParent(transform);
         }
     }
+    public void OnMove(InputValue value)
+    {
+        // Read the movement vector (WASD or D-Pad)
+        movementInput = value.Get<Vector2>();
+        Debug.Log($"Vector2 Value: {movementInput}");
+    }
     private void Drop()
     {
 
         // Places object in front of the direction the player is moving (transform.right)
         grabbedObject.transform.SetParent(null);
 
-        if (leftKey)
+        if (movementInput != Vector2.zero)
         {
-            Debug.Log("Dropped item at grab point Left");
-            grabbedObject.transform.position = LeftPoint.position;
-        }
-        else if(rightKey)
-        {
-            Debug.Log("Dropped item at grab point Right");
-            grabbedObject.transform.position = RightPoint.position;
-        }
-        else if(downKey)
-        {
-            Debug.Log("Dropped item at grab point Down");
-            grabbedObject.transform.position = DownPoint.position;
+            // Normalize the vector so diagonal movement drops at the exact same distance as straight lines
+            Vector3 dropDirection = new Vector3(movementInput.x, movementInput.y, 0f).normalized;
+
+            // Position = Player Position + (Direction Vector * Offset Distance)
+            grabbedObject.transform.position = transform.position + (dropDirection * dropOffset);
+
+            Debug.Log($"Dropped item in direction: {dropDirection}");
         }
         else
         {
-            Debug.Log("Dropped item at grab point Idle/Up");
+            // Fallback: If standing completely still, default to the grabPoint
             grabbedObject.transform.position = grabPoint.position;
-        }
 
-     
+            Debug.Log("Dropped item at grab point (Idle)");
+        }
 
         Rigidbody2D rb = grabbedObject.GetComponent<Rigidbody2D>();
         if (rb != null)
