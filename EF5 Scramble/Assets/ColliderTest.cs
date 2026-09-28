@@ -40,6 +40,11 @@ public class ColliderTest : MonoBehaviour
         }
         else
             renderer.material.color = Color.blue;
+<<<<<<< HEAD
     }
 
+=======
+        }
+    }
+>>>>>>> parent of a78f22f (quickj)
 }
