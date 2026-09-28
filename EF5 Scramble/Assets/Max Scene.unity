@@ -360,6 +360,7 @@ GameObject:
   - component: {fileID: 717327689}
   - component: {fileID: 717327688}
   - component: {fileID: 717327687}
+  - component: {fileID: 717327691}
   m_Layer: 6
   m_Name: Flashlight
   m_TagString: Untagged
@@ -515,6 +516,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &717327691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 717327686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4323fe8d47401c4494531b26cf5674d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Item
+  itemType: 1
 --- !u!1 &728828149
 GameObject:
   m_ObjectHideFlags: 0
@@ -527,7 +541,7 @@ GameObject:
   - component: {fileID: 728828153}
   - component: {fileID: 728828152}
   - component: {fileID: 728828151}
-  - component: {fileID: 728828150}
+  - component: {fileID: 728828155}
   m_Layer: 6
   m_Name: Wife
   m_TagString: Untagged
@@ -535,22 +549,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &728828150
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 728828149}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7d17f010822d724bb95f9f8d916728f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GiveMeType
-  IDchild: 0
-  IDwife: 0
-  IDflashlight: 0
-  IDradio: 0
 --- !u!50 &728828151
 Rigidbody2D:
   serializedVersion: 5
@@ -699,6 +697,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &728828155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 728828149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4323fe8d47401c4494531b26cf5674d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  itemType: 0
 --- !u!1 &787653370
 GameObject:
   m_ObjectHideFlags: 0
@@ -1157,6 +1168,7 @@ GameObject:
   - component: {fileID: 1087419494}
   - component: {fileID: 1087419493}
   - component: {fileID: 1087419492}
+  - component: {fileID: 1087419496}
   m_Layer: 6
   m_Name: Radio
   m_TagString: Untagged
@@ -1312,6 +1324,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1087419496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1087419491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4323fe8d47401c4494531b26cf5674d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Item
+  itemType: 3
 --- !u!1 &1206777000
 GameObject:
   m_ObjectHideFlags: 0
@@ -1673,13 +1698,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1302117653}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7d17f010822d724bb95f9f8d916728f, type: 3}
+  m_Script: {fileID: 11500000, guid: a4323fe8d47401c4494531b26cf5674d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  IDchild: 0
-  IDwife: 0
-  IDflashlight: 0
-  IDradio: 0
+  itemType: 2
 --- !u!1 &1889512405
 GameObject:
   m_ObjectHideFlags: 0
