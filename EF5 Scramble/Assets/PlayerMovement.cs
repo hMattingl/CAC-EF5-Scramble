@@ -7,17 +7,26 @@ public class PlayerMovement : MonoBehaviour
 
     public float moveSpeed;
 
-    private Vector2 _moveDirection;
+    private Vector2 movementInput;
 
     public InputActionReference move;
 
+    private void OnEnable()
+    {
+        if (move != null && move.action != null) move.action.Enable();
+    }
+    private void OnDisable()
+    {
+        if (move != null && move.action != null) move.action.Disable();
+    }
+
     void Update()
     {
-        _moveDirection = move.action.ReadValue<Vector2>();
+        movementInput = move.action.ReadValue<Vector2>();
     }
 
     private void FixedUpdate()
     {
-        rb.linearVelocity = new Vector2(_moveDirection.x * moveSpeed, _moveDirection.y * moveSpeed);
+        rb.linearVelocity = new Vector2(movementInput.x * moveSpeed, movementInput.y * moveSpeed);
     }
 }
