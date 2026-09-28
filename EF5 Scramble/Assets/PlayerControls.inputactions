@@ -7,42 +7,21 @@
             "id": "c067a24c-853c-499e-a0c7-6c11e2072716",
             "actions": [
                 {
-                    "name": "Grab",
-                    "type": "Button",
-                    "id": "90b0afce-bc1d-4cf4-bef3-8aea0a9f1545",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false,
-                    "priority": 0
-                },
-                {
                     "name": "Move",
-                    "type": "PassThrough",
+                    "type": "Value",
                     "id": "b303f41b-3fd5-4827-8da0-3d52e94ebc2c",
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false,
+                    "initialStateCheck": true,
                     "priority": 0
                 }
             ],
             "bindings": [
                 {
-                    "name": "",
-                    "id": "74002bec-fdd5-4340-82c1-4909e6cc4437",
-                    "path": "<Keyboard>/e",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Grab",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
                     "name": "2D Vector",
                     "id": "a85b0b22-06f2-4771-b155-8adb85f49487",
-                    "path": "2DVector",
+                    "path": "2DVector(mode=2)",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
