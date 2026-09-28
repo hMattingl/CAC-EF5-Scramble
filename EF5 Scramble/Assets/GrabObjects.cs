@@ -4,8 +4,11 @@ using UnityEngine.InputSystem;
 public class GrabObjects : MonoBehaviour
 {
     [SerializeField] private Transform grabPoint; // Position above player's head
+    //How far can I grab
     [SerializeField] private float grabRadius = 1.5f;
+    //drop object this far from player
     [SerializeField] private float dropOffset = 1.0f;
+    //Object layer
     [SerializeField] private LayerMask objectLayer;
 
     private GameObject grabbedObject;
@@ -15,20 +18,14 @@ public class GrabObjects : MonoBehaviour
         if (Keyboard.current.spaceKey.wasPressedThisFrame)
         {
             if (grabbedObject == null)
-            {
                 TryGrab();
-            }
             else
-            {
                 Drop();
-            }
         }
 
         // Keep grabbed object attached to the grabPoint
         if (grabbedObject != null)
-        {
             grabbedObject.transform.position = grabPoint.position;
-        }
     }
 
     private void TryGrab()
@@ -57,9 +54,7 @@ public class GrabObjects : MonoBehaviour
 
         Rigidbody2D rb = grabbedObject.GetComponent<Rigidbody2D>();
         if (rb != null)
-        {
             rb.bodyType = RigidbodyType2D.Dynamic;
-        }
 
         grabbedObject = null;
     }
