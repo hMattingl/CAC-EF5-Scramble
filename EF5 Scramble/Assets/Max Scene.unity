@@ -991,7 +991,7 @@ MonoBehaviour:
   objectLayer:
     serializedVersion: 2
     m_Bits: 64
-  grabRadius: 1.5
+  grabRadius: 2
 --- !u!61 &1064283088
 BoxCollider2D:
   m_ObjectHideFlags: 0
