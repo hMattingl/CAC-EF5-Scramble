@@ -7,10 +7,13 @@ public class statsDisplay : MonoBehaviour
     [SerializeField] private TextMeshProUGUI stats;
     private int fear = 0;
     private bool hasRadio = false;
+    private int timePased = 0;
   
     // Update is called once per frame
     void Update()
     {
+        timePased = (int)Time.time;
+
         //sets fear to 0 if it goes below 0
         if (fear < 0)
         {
@@ -18,7 +21,7 @@ public class statsDisplay : MonoBehaviour
         }
 
         //displays fear and other vars
-        stats.text = " FEAR METER : " + fear + " has radio :" + hasRadio;
+        stats.text = " FEAR METER : " + fear + " has radio :" + hasRadio + timePased;
 
         //game over state
         if (fear >= 100)
