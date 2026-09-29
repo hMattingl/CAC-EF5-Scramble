@@ -8,11 +8,17 @@ public class statsDisplay : MonoBehaviour
     private int fear = 0;
     private bool hasRadio = false;
     private int timePased = 0;
-  
+    private int efLevel;
+    private void Start()
+    {
+        efLevel = Random.Range(1, 6);
+    }
+
     // Update is called once per frame
     void Update()
     {
         timePased = (int)Time.time;
+       
 
         //sets fear to 0 if it goes below 0
         if (fear < 0)
@@ -46,7 +52,7 @@ public class statsDisplay : MonoBehaviour
         }
         else
         {
-            fear -= 10;
+            fear += 20;
         }
     }
 }
