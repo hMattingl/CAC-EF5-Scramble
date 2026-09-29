@@ -2,7 +2,7 @@ using UnityEngine;
 
 public enum ItemType
 {
-    Wife,
+    Spouse,
     Flashlight,
     Child,
     Radio,

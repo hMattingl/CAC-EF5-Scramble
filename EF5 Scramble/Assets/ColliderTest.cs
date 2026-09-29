@@ -5,7 +5,7 @@ public class ColliderTest : MonoBehaviour
 {
     [SerializeField] private LayerMask objectLayer;
     [SerializeField] private float grabRadius = 1.5f;
-    private int wife, child, radio, flashL;
+    private int spouse, child, radio, flashL;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -38,13 +38,13 @@ public class ColliderTest : MonoBehaviour
         //Make an item labeled other attached to the detected game object and search for an Item class within them
         Item item = other.gameObject.GetComponent<Item>();
         //If our item is filled, and its a wife, and its not parented; log it, destroy, and affirm its accounted for
-        if (item != null && item.Type == ItemType.Wife && other.transform.parent == null)
+        if (item != null && item.Type == ItemType.Spouse && other.transform.parent == null)
         {
             //This is pretty funny out of context
-            Debug.Log("I detect a wife");
+            Debug.Log("I detect a spouse");
             ItemInventory(1, 0, 0, 0);
             Destroy(other.gameObject);
-            WifeNum();
+            SpouseNum();
         }
         //otherwise If our item is filled, and its a child, and its not parented; log it, destroy, and affirm its accounted for
         else if (item != null && item.Type == ItemType.Child && other.transform.parent == null)
@@ -72,16 +72,16 @@ public class ColliderTest : MonoBehaviour
         }
     }
 
-    private void ItemInventory(int addWife, int addChild, int addRadio, int addFl)
+    private void ItemInventory(int addSpouse, int addChild, int addRadio, int addFl)
     {
-        wife += addWife;
+        spouse += addSpouse;
         child += addChild;
         radio += addRadio;
         flashL += addFl;
     }
 
     //Methods to see how many of any given Items the hiding spot has
-    public void WifeNum() { Debug.Log($"{wife} wife(s)"); }
+    public void SpouseNum() { Debug.Log($"{spouse} spouse(s)"); }
     public void ChildNum() { Debug.Log($"{child} offspring"); }
     public void RadioNum() { Debug.Log($"{radio} radio(s)"); }
     public void FlashLNum() { Debug.Log($"{flashL} flashlight(s)"); }
