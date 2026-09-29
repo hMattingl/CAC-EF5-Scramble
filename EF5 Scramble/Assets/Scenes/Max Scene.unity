@@ -542,27 +542,13 @@ GameObject:
   - component: {fileID: 728828152}
   - component: {fileID: 728828151}
   - component: {fileID: 728828155}
-  - component: {fileID: 728828150}
   m_Layer: 6
-  m_Name: Wife
+  m_Name: Spouse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &728828150
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 728828149}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4323fe8d47401c4494531b26cf5674d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GiveMeType
-  itemType: 0
 --- !u!50 &728828151
 Rigidbody2D:
   serializedVersion: 5
@@ -1730,7 +1716,7 @@ GameObject:
   - component: {fileID: 1360511837}
   - component: {fileID: 1360511836}
   m_Layer: 6
-  m_Name: Child (1)
+  m_Name: Child 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2134,7 +2120,6 @@ MonoBehaviour:
   RightPoint: {fileID: 1206777001}
   DownPoint: {fileID: 1226805678}
   grabRadius: 1.5
-  dropOffset: 1.1
   objectLayer:
     serializedVersion: 2
     m_Bits: 64
