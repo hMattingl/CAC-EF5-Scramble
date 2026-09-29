@@ -10,7 +10,7 @@ public class ColliderTest : MonoBehaviour
     void Start()
     {
         Renderer renderer = GetComponent<Renderer>();
-        renderer.material.color = Color.blue;
+        renderer.material.color = Color.green;
     }
 
     // Update is called once per frame

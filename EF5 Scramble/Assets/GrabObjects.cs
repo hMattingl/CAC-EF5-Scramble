@@ -15,8 +15,6 @@ public class GrabObjects : MonoBehaviour
     //How far can I grab
     [SerializeField] private float grabRadius = 1.5f;
     //drop object this far from player
-    [SerializeField] private float dropOffset = 1.0f;
-    //Object layer
     [SerializeField] private LayerMask objectLayer;
     //Variable for movement
     private Vector2 movementInput;
