@@ -540,8 +540,8 @@ GameObject:
   - component: {fileID: 728828154}
   - component: {fileID: 728828153}
   - component: {fileID: 728828152}
-  - component: {fileID: 728828151}
   - component: {fileID: 728828155}
+  - component: {fileID: 728828150}
   m_Layer: 6
   m_Name: Wife
   m_TagString: Untagged
@@ -561,33 +561,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4323fe8d47401c4494531b26cf5674d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GiveMeType
-  itemType: 0--- !u!50 &728828151
-Rigidbody2D:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 728828149}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 0.0001
-  m_LinearDamping: 5
-  m_AngularDamping: 5
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
+  itemType: 0
 --- !u!61 &728828152
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -989,7 +963,7 @@ MonoBehaviour:
   objectLayer:
     serializedVersion: 2
     m_Bits: 64
-  grabRadius: 1.5
+  grabRadius: 2
 --- !u!61 &1064283088
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2132,7 +2106,6 @@ MonoBehaviour:
   RightPoint: {fileID: 1206777001}
   DownPoint: {fileID: 1226805678}
   grabRadius: 1.5
-  dropOffset: 1.1
   objectLayer:
     serializedVersion: 2
     m_Bits: 64
