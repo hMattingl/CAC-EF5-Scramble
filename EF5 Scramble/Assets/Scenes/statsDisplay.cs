@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 
 public class statsDisplay : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class statsDisplay : MonoBehaviour
     private bool hasRadio = false;
     private int timePased = 0;
     private int efLevel;
+
     private void Start()
     {
         efLevel = Random.Range(1, 6);
@@ -27,7 +29,7 @@ public class statsDisplay : MonoBehaviour
         }
 
         //displays fear and other vars
-        stats.text = " FEAR METER : " + fear + " has radio :" + hasRadio + timePased;
+        stats.text = " FEAR METER : " + fear + " has radio :" + hasRadio + "    Time passed: " + timePased;
 
         //game over state
         if (fear >= 100)
@@ -44,7 +46,30 @@ public class statsDisplay : MonoBehaviour
 
     public void RandomEvent()
     {
-        int rEvent = Random.Range(0, 20);
+        int rEvent;
+
+        if(efLevel == 1)
+        {
+            rEvent = Random.Range(0, 3);
+        }
+        else if (efLevel == 2)
+        {
+            rEvent = Random.Range(3, 7);
+        }
+        else if (efLevel == 3)
+        {
+            rEvent = Random.Range(7, 13);
+        }
+        else if (efLevel == 4)
+        {
+            rEvent = Random.Range(13, 17);
+        }
+        else
+        {
+            rEvent = Random.Range(17, 21);
+        }
+
+
 
         if (rEvent == 0)
         {
@@ -54,5 +79,16 @@ public class statsDisplay : MonoBehaviour
         {
             fear += 20;
         }
+    }
+
+    public void UseRadio()
+    {
+        private string radioText;
+        private int radioRandom = Random.Range(0,5);
+        
+
+        
+
+
     }
 }
