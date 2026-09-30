@@ -977,7 +977,11 @@ MonoBehaviour:
   objectLayer:
     serializedVersion: 2
     m_Bits: 64
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 0
   grabRadius: 2
+  player: {fileID: 0}
 --- !u!61 &1064283088
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2133,7 +2137,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2109489156}
   - component: {fileID: 2109489157}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Eyeball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
