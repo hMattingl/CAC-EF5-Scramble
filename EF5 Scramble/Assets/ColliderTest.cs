@@ -11,14 +11,15 @@ public class ColliderTest : MonoBehaviour
 
     //These are serializeField that are needed to transfer data from script to script
     //DO NOT TOUCH  
+    /*
     [SerializeField] int NumberOfSpouse;
     [SerializeField] int NumberOfChild;
     [SerializeField] int NumberOfFlashLight;
     [SerializeField] int NumberOfRadio;
-
+    */
    
         
-    private int spouse, child, radio, flashL;
+    private int spouse, child, radio, flashL, boardG;
     private Boolean inSZ = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -60,15 +61,15 @@ public class ColliderTest : MonoBehaviour
         {
             //This is pretty funny out of context
             Debug.Log("I detect a spouse");
-            ItemInventory(1, 0, 0, 0);
+            ItemInventory(1, 0, 0, 0, 0);
             Destroy(other.gameObject);
-            Debug.Log($"{SpouseNum()} spouse(s)");
+            Debug.Log($"{spouse} spouse(s)");
         }
         //otherwise If our item is filled, and its a child, and its not parented; log it, destroy, and affirm its accounted for
         else if (item != null && item.Type == ItemType.Child && other.transform.parent == null)
         {
             Debug.Log("I detect a child");
-            ItemInventory(0, 1, 0, 0);
+            ItemInventory(0, 1, 0, 0, 0);
             Destroy(other.gameObject);
             Debug.Log($"{child} offspring");
         }
@@ -76,7 +77,7 @@ public class ColliderTest : MonoBehaviour
         else if (item != null && item.Type == ItemType.Flashlight && other.transform.parent == null)
         {
             Debug.Log("I detect a flashlight");
-            ItemInventory(0, 0, 0, 1);
+            ItemInventory(0, 0, 0, 1, 0);
             Destroy(other.gameObject);
             Debug.Log($"{flashL} flashlight(s)");
         }
@@ -84,18 +85,27 @@ public class ColliderTest : MonoBehaviour
         else if (item != null && item.Type == ItemType.Radio && other.transform.parent == null)
         {
             Debug.Log("I detect a radio");
-            ItemInventory(0, 0, 1, 0);
+            ItemInventory(0, 0, 1, 0, 0);
             Destroy(other.gameObject);
             Debug.Log($"{radio} radio(s)");
         }
+        //otherwise If our item is filled, and its a radio, and its not parented; log it, destroy, and affirm its accounted for
+        else if (item != null && item.Type == ItemType.Boardgames && other.transform.parent == null)
+        {
+            Debug.Log("I detect a Boardgame");
+            ItemInventory(0, 0, 0, 0, 1);
+            Destroy(other.gameObject);
+            Debug.Log($"{boardG} Boardgame(s)");
+        }
     }
 
-    private void ItemInventory(int addSpouse, int addChild, int addRadio, int addFl)
+    private void ItemInventory(int addSpouse, int addChild, int addRadio, int addFl, int addBG)
     {
         spouse += addSpouse;
         child += addChild;
         radio += addRadio;
         flashL += addFl;
+        boardG += addBG;
     }
 
     public Boolean InSafeZone()
@@ -108,9 +118,19 @@ public class ColliderTest : MonoBehaviour
     public int ChildNum() { return child; }
     public int RadioNum() { return radio; }
     public int FlashLNum() { return flashL; }
+    public int BoardGNum() { return boardG; }
 
     public void LoadSceneAndKeepValue()
     {
-        
+        int dataSpouse = SpouseNum();
+        StaticData.keepSpouse = dataSpouse;
+        int dataChild = ChildNum();
+        StaticData.keepChild = dataChild;
+        int dataRadio = RadioNum();
+        StaticData.keepRadio = dataChild;
+        int dataFlash = FlashLNum();
+        StaticData.keepFlashlight = dataFlash;
+        int dataBoard = BoardGNum();
+        StaticData.keepBoardG = dataBoard;
     }
 }
