@@ -8,6 +8,16 @@ public class ColliderTest : MonoBehaviour
     [SerializeField] private LayerMask playerLayer;
     [SerializeField] private float grabRadius = 1.5f;
     [SerializeField] private Transform player;
+
+    //These are serializeField that are needed to transfer data from script to script
+    //DO NOT TOUCH  
+    [SerializeField] int NumberOfSpouse;
+    [SerializeField] int NumberOfChild;
+    [SerializeField] int NumberOfFlashLight;
+    [SerializeField] int NumberOfRadio;
+
+   
+        
     private int spouse, child, radio, flashL;
     private Boolean inSZ = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -98,4 +108,9 @@ public class ColliderTest : MonoBehaviour
     public int ChildNum() { return child; }
     public int RadioNum() { return radio; }
     public int FlashLNum() { return flashL; }
+
+    public void LoadSceneAndKeepValue()
+    {
+        
+    }
 }
