@@ -7,16 +7,20 @@ public class statsDisplay : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI stats;
     [SerializeField] private TextMeshProUGUI radio;
+    [SerializeField] private TextMeshProUGUI randomEventText;
     private int fear = 0;
+    private bool hasBoardGame = false;
     private bool hasRadio = false;
     private int timePased = 0;
     private int efLevel;
     private string radiotxt;
-    private int radioRandom;
+    private int radioRandom = 0;
+    private int hour;
 
     private void Start()
     {
         efLevel = Random.Range(1, 6);
+
     }
 
     // Update is called once per frame
@@ -24,15 +28,17 @@ public class statsDisplay : MonoBehaviour
     {
         timePased = (int)Time.time;
 
+        if (hour * 60 == timePased)
+            hour++;
+
+
 
         //sets fear to 0 if it goes below 0
         if (fear < 0)
-        {
             fear = 0;
-        }
 
         //displays fear and other vars
-        stats.text = " FEAR METER : " + fear + " has radio :" + hasRadio + "    Time passed: " + timePased;
+        stats.text = " FEAR METER : " + fear + "    Time passed: " + hour + " hours";
 
         //game over state
         if (fear >= 100)
@@ -77,17 +83,24 @@ public class statsDisplay : MonoBehaviour
         if (rEvent == 0)
         {
             fear += 10;
+            randomEventText.text = " window Crashed";
         }
         else
         {
             fear += 20;
+
         }
+
+
+        
     }
 
     public void UseRadio()
     {
+        radiotxt = "test text";
 
         radio.text = radiotxt;
+
 
     }
     
