@@ -6,10 +6,13 @@ using UnityEngine.UIElements;
 public class statsDisplay : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI stats;
+    [SerializeField] private TextMeshProUGUI radio;
     private int fear = 0;
     private bool hasRadio = false;
     private int timePased = 0;
     private int efLevel;
+    private string radiotxt;
+    private int radioRandom;
 
     private void Start()
     {
@@ -20,7 +23,7 @@ public class statsDisplay : MonoBehaviour
     void Update()
     {
         timePased = (int)Time.time;
-       
+
 
         //sets fear to 0 if it goes below 0
         if (fear < 0)
@@ -39,7 +42,7 @@ public class statsDisplay : MonoBehaviour
 
     }
 
-    public void ChangeFearMeter (int ammount)
+    public void ChangeFearMeter(int ammount)
     {
         fear = fear + ammount;
     }
@@ -48,7 +51,7 @@ public class statsDisplay : MonoBehaviour
     {
         int rEvent;
 
-        if(efLevel == 1)
+        if (efLevel == 1)
         {
             rEvent = Random.Range(0, 3);
         }
@@ -83,12 +86,18 @@ public class statsDisplay : MonoBehaviour
 
     public void UseRadio()
     {
-        private string radioText;
-        private int radioRandom = Random.Range(0,5);
-        
 
-        
-
+        radio.text = radiotxt;
 
     }
-}
+    
+       
+
+
+}    
+
+        
+
+
+    
+
