@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class QTEBarEvent : MonoBehaviour
 {
@@ -22,24 +23,27 @@ public class QTEBarEvent : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Keyboard.current.spaceKey.wasPressedThisFrame && targetScriptReference.inArea=="true")
+        if (score < 10)
         {
-            score += 1;
-
-            Debug.Log($"{score} Point(s)");
-            if (score <= 2)
+            if (Keyboard.current.spaceKey.wasPressedThisFrame && targetScriptReference.inArea == "true")
             {
-                movementInput *= score;
+                score += 1;
+
+                Debug.Log($"{score} Point(s)");
+                if (score <= 2)
+                {
+                    movementInput *= score;
+                }
             }
-        }
-        else if (Keyboard.current.spaceKey.wasPressedThisFrame && targetScriptReference.inArea == "false")
-        {
-            score *= 0;
-            Debug.Log($"{score} Point(s)");
-            movementInput *= 0;
-            if (targetScriptReference.currentDirection == "left")
-                movementInput = Vector2.left;
-            else movementInput = Vector2.right;
+            else if (Keyboard.current.spaceKey.wasPressedThisFrame && targetScriptReference.inArea == "false")
+            {
+                score *= 0;
+                Debug.Log($"{score} Point(s)");
+                movementInput *= 0;
+                if (targetScriptReference.currentDirection == "left")
+                    movementInput = Vector2.left;
+                else movementInput = Vector2.right;
+            }
         }
 
     }
