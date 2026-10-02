@@ -25,15 +25,21 @@ public class QTEBarEvent : MonoBehaviour
         if (Keyboard.current.spaceKey.wasPressedThisFrame && targetScriptReference.inArea=="true")
         {
             score += 1;
-            movementInput *= score;
+
             Debug.Log($"{score} Point(s)");
+            if (score <= 2)
+            {
+                movementInput *= score;
+            }
         }
         else if (Keyboard.current.spaceKey.wasPressedThisFrame && targetScriptReference.inArea == "false")
         {
             score *= 0;
             Debug.Log($"{score} Point(s)");
-            movementInput *=0;
-            //movementInput += (1, 0);
+            movementInput *= 0;
+            if (targetScriptReference.currentDirection == "left")
+                movementInput = Vector2.left;
+            else movementInput = Vector2.right;
         }
 
     }

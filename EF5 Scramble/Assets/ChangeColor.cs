@@ -7,6 +7,7 @@ public class ChangeColor : MonoBehaviour
     [SerializeField] private LayerMask defaultLayer;
     [SerializeField] private float grabRadius = 1.5f;
     [SerializeField] private QTEBarEvent targetScriptReference;
+    public string currentDirection = "left";
     public string inArea = "false";
     public string layerName;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -39,6 +40,10 @@ public class ChangeColor : MonoBehaviour
             if (hit != null)
             {
                 targetScriptReference.movementInput *= -1;
+                if (currentDirection == "left")
+                    currentDirection = "right";
+                else
+                    currentDirection = "left";
             }
         }
     }
