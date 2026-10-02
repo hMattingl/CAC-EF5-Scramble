@@ -651,8 +651,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af36fb7561142a24c9c97c3bb6f43912, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::statsDisplay
-  stats: {fileID: 0}
-  radio: {fileID: 0}
+  stats: {fileID: 1362093212}
+  radio: {fileID: 853474411}
   randomEventText: {fileID: 408986722}
 --- !u!1 &805295707
 GameObject:
@@ -941,9 +941,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af36fb7561142a24c9c97c3bb6f43912, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::statsDisplay
-  stats: {fileID: 0}
+  stats: {fileID: 1362093212}
   radio: {fileID: 853474411}
-  randomEventText: {fileID: 0}
+  randomEventText: {fileID: 408986722}
 --- !u!1 &1052216782
 GameObject:
   m_ObjectHideFlags: 0
@@ -956,6 +956,7 @@ GameObject:
   - component: {fileID: 1052216786}
   - component: {fileID: 1052216785}
   - component: {fileID: 1052216784}
+  - component: {fileID: 1052216787}
   m_Layer: 5
   m_Name: move from event
   m_TagString: Untagged
@@ -1027,7 +1028,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: af36fb7561142a24c9c97c3bb6f43912, type: 3}
+      - m_Target: {fileID: 1052216787}
         m_TargetAssemblyTypeName: 
         m_MethodName: 
         m_Mode: 1
@@ -1077,6 +1078,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1052216782}
   m_CullTransparentMesh: 1
+--- !u!114 &1052216787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1052216782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af36fb7561142a24c9c97c3bb6f43912, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::statsDisplay
+  stats: {fileID: 1362093212}
+  radio: {fileID: 853474411}
+  randomEventText: {fileID: 408986722}
 --- !u!1 &1224070859
 GameObject:
   m_ObjectHideFlags: 0
@@ -1307,8 +1323,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::statsDisplay
   stats: {fileID: 1362093212}
-  radio: {fileID: 0}
-  randomEventText: {fileID: 0}
+  radio: {fileID: 853474411}
+  randomEventText: {fileID: 408986722}
 --- !u!1 &1405941171
 GameObject:
   m_ObjectHideFlags: 0
@@ -1555,8 +1571,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::statsDisplay
   stats: {fileID: 1362093212}
-  radio: {fileID: 0}
-  randomEventText: {fileID: 0}
+  radio: {fileID: 853474411}
+  randomEventText: {fileID: 408986722}
 --- !u!114 &1584625115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1607,6 +1623,7 @@ GameObject:
   - component: {fileID: 1979367955}
   - component: {fileID: 1979367954}
   - component: {fileID: 1979367953}
+  - component: {fileID: 1979367956}
   m_Layer: 5
   m_Name: Radio
   m_TagString: Untagged
@@ -1677,7 +1694,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1979367954}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1979367956}
+        m_TargetAssemblyTypeName: statsDisplay, Assembly-CSharp
+        m_MethodName: UseRadio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1979367954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1716,6 +1745,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1979367951}
   m_CullTransparentMesh: 1
+--- !u!114 &1979367956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1979367951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af36fb7561142a24c9c97c3bb6f43912, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::statsDisplay
+  stats: {fileID: 1362093212}
+  radio: {fileID: 853474411}
+  randomEventText: {fileID: 408986722}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

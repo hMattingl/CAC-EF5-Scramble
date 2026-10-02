@@ -11,6 +11,7 @@ public class statsDisplay : MonoBehaviour
     private int fear = 0;
     private bool hasBoardGame = false;
     private bool hasRadio = false;
+    private bool doneBoardGame = false;
     private int timePased = 0;
     private int efLevel;
     private string radiotxt;
@@ -19,7 +20,8 @@ public class statsDisplay : MonoBehaviour
 
     private void Start()
     {
-        efLevel = Random.Range(1, 6);
+        efLevel = 1;//Random.Range(1, 6);
+
 
     }
 
@@ -29,7 +31,12 @@ public class statsDisplay : MonoBehaviour
         timePased = (int)Time.time;
 
         if (hour * 60 == timePased)
+        {
             hour++;
+            doneBoardGame = false;
+
+        }
+            
 
 
 
@@ -59,23 +66,23 @@ public class statsDisplay : MonoBehaviour
 
         if (efLevel == 1)
         {
-            rEvent = Random.Range(0, 3);
+            rEvent = Random.Range(0, 2);
         }
         else if (efLevel == 2)
         {
-            rEvent = Random.Range(3, 7);
+            rEvent = Random.Range(2, 4);
         }
         else if (efLevel == 3)
         {
-            rEvent = Random.Range(7, 13);
+            rEvent = Random.Range(4, 6);
         }
         else if (efLevel == 4)
         {
-            rEvent = Random.Range(13, 17);
+            rEvent = Random.Range(6, 8);
         }
         else
         {
-            rEvent = Random.Range(17, 21);
+            rEvent = Random.Range(8, 10);
         }
 
 
