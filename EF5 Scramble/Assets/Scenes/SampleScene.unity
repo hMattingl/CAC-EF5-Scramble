@@ -904,7 +904,11 @@ MonoBehaviour:
   objectLayer:
     serializedVersion: 2
     m_Bits: 0
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 0
   grabRadius: 1.5
+  player: {fileID: 0}
 --- !u!1 &1407968896
 GameObject:
   m_ObjectHideFlags: 0
@@ -950,8 +954,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GrabObjects
   grabPoint: {fileID: 0}
+  LeftPoint: {fileID: 0}
+  RightPoint: {fileID: 0}
+  DownPoint: {fileID: 0}
   grabRadius: 1.5
-  dropOffset: 1
   objectLayer:
     serializedVersion: 2
     m_Bits: 0
