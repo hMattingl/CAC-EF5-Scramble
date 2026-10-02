@@ -22,6 +22,6 @@ public class statsDisplay : MonoBehaviour
 
     public void ChangeFearMeter (int ammount)
     {
-        fear = fear + ammount;
+        fear += ammount;
     }
 }

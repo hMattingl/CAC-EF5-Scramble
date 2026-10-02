@@ -15,7 +15,7 @@ public class EndStageOne : MonoBehaviour
     void Update()
     {
         if (Time.time > 40 && targetScriptReference.InSafeZone())
-            SceneManager.LoadScene("nextScene");
+            SceneManager.LoadScene("Main Scene");
         else if (Time.time > 40 && targetScriptReference.InSafeZone()==false)
             SceneManager.LoadScene("GameOver");
 
