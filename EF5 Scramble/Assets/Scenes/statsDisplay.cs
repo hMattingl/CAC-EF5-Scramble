@@ -1,52 +1,49 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 public class statsDisplay : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI stats;
-    [SerializeField] private TextMeshProUGUI radio;
-    [SerializeField] private TextMeshProUGUI randomEventText;
-    private int fear = 0;
+    static int fear = 0;
     private bool hasBoardGame = false;
-    private bool hasRadio = false;
     private bool doneBoardGame = false;
     private int timePased = 0;
-    private int efLevel;
-    private string radiotxt;
-    private int radioRandom = 0;
-    private int hour;
-
+    private int hour = 1;
+    
+    
+    
     private void Start()
-    {
-        efLevel = 1;//Random.Range(1, 6);
-
-
+    {  
+        fear = 0;    
     }
 
     // Update is called once per frame
     void Update()
-    {
+    {    
+        
+
+        //displays fear and other vars
+        stats.text = " FEAR METER : " + fear + "     Time passed: " + hour + " hours";
+        
+        //sets fear to 0 if it goes below 0
+        if (fear < 0)
+        {
+            fear = 0;
+        }
+        
         timePased = (int)Time.time;
 
-        if (hour * 60 == timePased)
+        if (hour * 10 == timePased)
         {
             hour++;
-            doneBoardGame = false;
+            randomEvents.hourReset();
+            Radiothings.hourReset();
 
         }
             
-
-
-
-        //sets fear to 0 if it goes below 0
-        if (fear < 0)
-            fear = 0;
-
-        //displays fear and other vars
-        stats.text = " FEAR METER : " + fear + "    Time passed: " + hour + " hours";
-
         //game over state
         if (fear >= 100)
         {
@@ -55,65 +52,13 @@ public class statsDisplay : MonoBehaviour
 
     }
 
-    public void ChangeFearMeter(int ammount)
+    public static void ChangeFearMeter(int ammount)
     {
         fear = fear + ammount;
     }
 
-    public void RandomEvent()
-    {
-        int rEvent;
 
-        if (efLevel == 1)
-        {
-            rEvent = Random.Range(0, 2);
-        }
-        else if (efLevel == 2)
-        {
-            rEvent = Random.Range(2, 4);
-        }
-        else if (efLevel == 3)
-        {
-            rEvent = Random.Range(4, 6);
-        }
-        else if (efLevel == 4)
-        {
-            rEvent = Random.Range(6, 8);
-        }
-        else
-        {
-            rEvent = Random.Range(8, 10);
-        }
-
-
-
-        if (rEvent == 0)
-        {
-            fear += 10;
-            randomEventText.text = " window Crashed";
-        }
-        else
-        {
-            fear += 20;
-
-        }
-
-
-        
-    }
-
-    public void UseRadio()
-    {
-        radiotxt = "test text";
-
-        radio.text = radiotxt;
-
-
-    }
-    
-       
-
-
+   
 }    
 
         
