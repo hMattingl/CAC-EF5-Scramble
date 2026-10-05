@@ -54,7 +54,7 @@ public class statsDisplay : MonoBehaviour
 
     public static void ChangeFearMeter(int ammount)
     {
-        fear = fear + ammount;
+        fear += ammount;
     }
 
 
