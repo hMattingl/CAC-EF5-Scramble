@@ -1233,6 +1233,7 @@ GameObject:
   - component: {fileID: 1064283088}
   - component: {fileID: 1064283087}
   - component: {fileID: 1064283092}
+  - component: {fileID: 1064283093}
   m_Layer: 0
   m_Name: HidingSpot
   m_TagString: Untagged
@@ -1257,9 +1258,9 @@ MonoBehaviour:
     m_Bits: 64
   playerLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
   grabRadius: 2
-  player: {fileID: 0}
+  player: {fileID: 1889512409}
 --- !u!61 &1064283088
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1438,6 +1439,20 @@ MonoBehaviour:
   m_DefaultActionMap: Gameplay
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &1064283093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1064283086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f8a2d964bfaa7c40b4d3edff42a47ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EndStageOne
+  player: {fileID: 1889512409}
+  targetScriptReference: {fileID: 1064283087}
 --- !u!1 &1087419491
 GameObject:
   m_ObjectHideFlags: 0
@@ -2180,7 +2195,7 @@ GameObject:
   - component: {fileID: 1889512414}
   - component: {fileID: 1889512415}
   - component: {fileID: 1889512417}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
