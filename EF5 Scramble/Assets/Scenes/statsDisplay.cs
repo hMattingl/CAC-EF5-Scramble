@@ -36,7 +36,7 @@ public class statsDisplay : MonoBehaviour
         
         timePased = (int)Time.time;
 
-        if (hour * 10 == timePased)
+        if (hour * 60 == timePased)
         {
             hour++;
             randomEvents.hourReset();
