@@ -7,6 +7,7 @@ using UnityEditor;
 using System.IO;
 public class PlayerVariables : MonoBehaviour
 {
+
     public static void main()
     {
         //This costructs a player named Bob
@@ -17,7 +18,7 @@ public class PlayerVariables : MonoBehaviour
 
         //This constructs wife
         //She has the same stats as player character
-        //however the wife doesn't have to live for you to win the round. 
+        //however the wife does have to live for you to win the round. 
 
 
         //WE HAVE KIDSSSSSSSSSSSS
