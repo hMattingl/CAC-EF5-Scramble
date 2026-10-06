@@ -3,6 +3,7 @@ using TMPro;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
+using UnityEditor.PackageManager;
 
 public class randomEvents : MonoBehaviour
 {
@@ -20,7 +21,26 @@ public class randomEvents : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-         
+        if (efLevel == 1 && statsDisplay.GetHours() == 3)
+        {
+            SceneManager.LoadScene("Win Screen");
+        }
+        else if (efLevel == 2 && statsDisplay.GetHours() == 4)
+        {
+            SceneManager.LoadScene("Win Screen");
+        }
+        else if (efLevel == 3 && statsDisplay.GetHours() == 5)
+        {
+            SceneManager.LoadScene("Win Screen");
+        }
+        else if (efLevel == 4 && statsDisplay.GetHours() == 6)
+        {
+            SceneManager.LoadScene("Win Screen");
+        }
+        else if (efLevel == 5 && statsDisplay.GetHours() == 7)
+        {
+            SceneManager.LoadScene("Win Screen");
+        }
     }
 
         public void RandomEvent()

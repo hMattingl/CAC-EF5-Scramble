@@ -11,7 +11,7 @@ public class statsDisplay : MonoBehaviour
     private bool hasBoardGame = false;
     private bool doneBoardGame = false;
     private int timePased = 0;
-    private int hour = 1;
+    static int hour = 1;
     
     
     
@@ -55,6 +55,11 @@ public class statsDisplay : MonoBehaviour
     public static void ChangeFearMeter(int ammount)
     {
         fear += ammount;
+    }
+
+    public static int GetHours()
+    {
+        return hour;
     }
 
 
