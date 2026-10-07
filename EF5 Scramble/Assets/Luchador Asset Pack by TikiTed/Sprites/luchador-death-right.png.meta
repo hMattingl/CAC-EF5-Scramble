@@ -1,19 +1,32 @@
 fileFormatVersion: 2
-guid: 361980b5718f85347a8f359c0a502f32
+guid: ac502e59590818a44b2651e6402d8732
+AssetOrigin:
+  serializedVersion: 1
+  productId: 201907
+  packageName: Free Pixel Art Character 8 Directional Luchador - Mexican Wrestler
+  packageVersion: 1.0
+  assetPath: Assets/Luchador Asset Pack by TikiTed/Sprites/luchador-death-right.png
+  uploadId: 449980
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3777584855083000628
-    second: Luffy_DownScale_0
+      213: 4475393869849855907
+    second: luchador-death-right_0
   - first:
-      213: 7182900742792896078
-    second: Luffy_DownScale_1
+      213: -7213916443373916595
+    second: luchador-death-right_1
   - first:
-      213: 8922243054336413342
-    second: Luffy_DownScale_2
+      213: 8404242156449991444
+    second: luchador-death-right_2
   - first:
-      213: 8708340435784881669
-    second: Luffy_DownScale_3
+      213: -902081627931704272
+    second: luchador-death-right_3
+  - first:
+      213: -5751754480961658614
+    second: luchador-death-right_4
+  - first:
+      213: -1910610774440499171
+    second: luchador-death-right_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -60,7 +73,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -77,11 +90,11 @@ TextureImporter:
   ignorePngGamma: 0
   applyGammaDecoding: 0
   swizzle: 50462976
-  cookieLightType: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 256
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -94,10 +107,23 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
     buildTarget: Standalone
-    maxTextureSize: 2048
+    maxTextureSize: 256
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 256
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -107,10 +133,10 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
     buildTarget: WebGL
-    maxTextureSize: 2048
+    maxTextureSize: 256
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -122,89 +148,133 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Luffy_DownScale_0
+      name: luchador-death-right_0
       rect:
         serializedVersion: 2
-        x: 61
-        y: 257
-        width: 128
-        height: 236
+        x: 0
+        y: 0
+        width: 28
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: cccd1ebb692539bc0800000000000000
-      internalID: -3777584855083000628
+      spriteID: 3a78c52530bcb1e30800000000000000
+      internalID: 4475393869849855907
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Luffy_DownScale_1
+      name: luchador-death-right_1
       rect:
         serializedVersion: 2
-        x: 311
-        y: 257
-        width: 128
-        height: 236
+        x: 28
+        y: 0
+        width: 28
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e4e5f0f3b2acea360800000000000000
-      internalID: 7182900742792896078
+      spriteID: d4e2959373503eb90800000000000000
+      internalID: -7213916443373916595
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Luffy_DownScale_2
+      name: luchador-death-right_2
       rect:
         serializedVersion: 2
-        x: 61
-        y: 7
-        width: 128
-        height: 236
+        x: 56
+        y: 0
+        width: 28
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e9e0b6d29cc22db70800000000000000
-      internalID: 8922243054336413342
+      spriteID: 41b8095b6bdd1a470800000000000000
+      internalID: 8404242156449991444
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Luffy_DownScale_3
+      name: luchador-death-right_3
       rect:
         serializedVersion: 2
-        x: 312
-        y: 8
-        width: 126
-        height: 234
+        x: 84
+        y: 0
+        width: 28
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 506d022dc7d3ad870800000000000000
-      internalID: 8708340435784881669
+      spriteID: 03489b0f9892b73f0800000000000000
+      internalID: -902081627931704272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luchador-death-right_4
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 0
+        width: 28
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a01e40f06c9ad20b0800000000000000
+      internalID: -5751754480961658614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luchador-death-right_5
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 0
+        width: 28
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d18a07d9f952c75e0800000000000000
+      internalID: -1910610774440499171
       vertices: []
       indices: 
       edges: []
@@ -213,7 +283,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 972a54b6a9b9d2644a06b85d17588247
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -223,10 +293,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Luffy_DownScale_0: -3777584855083000628
-      Luffy_DownScale_1: 7182900742792896078
-      Luffy_DownScale_2: 8922243054336413342
-      Luffy_DownScale_3: 8708340435784881669
+      luchador-death-right_0: 4475393869849855907
+      luchador-death-right_1: -7213916443373916595
+      luchador-death-right_2: 8404242156449991444
+      luchador-death-right_3: -902081627931704272
+      luchador-death-right_4: -5751754480961658614
+      luchador-death-right_5: -1910610774440499171
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,19 +1,26 @@
 fileFormatVersion: 2
-guid: 361980b5718f85347a8f359c0a502f32
+guid: fb1303edef5ac62459be3b1e0f6d7fac
+AssetOrigin:
+  serializedVersion: 1
+  productId: 201907
+  packageName: Free Pixel Art Character 8 Directional Luchador - Mexican Wrestler
+  packageVersion: 1.0
+  assetPath: Assets/Luchador Asset Pack by TikiTed/Sprites/luchador-walk-right.png
+  uploadId: 449980
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3777584855083000628
-    second: Luffy_DownScale_0
+      213: -6704893704512736787
+    second: luchador-walk-right_0
   - first:
-      213: 7182900742792896078
-    second: Luffy_DownScale_1
+      213: 6312818276356001766
+    second: luchador-walk-right_1
   - first:
-      213: 8922243054336413342
-    second: Luffy_DownScale_2
+      213: -7939396664100887719
+    second: luchador-walk-right_2
   - first:
-      213: 8708340435784881669
-    second: Luffy_DownScale_3
+      213: 6649411451828136755
+    second: luchador-walk-right_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -60,7 +67,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -77,11 +84,11 @@ TextureImporter:
   ignorePngGamma: 0
   applyGammaDecoding: 0
   swizzle: 50462976
-  cookieLightType: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 128
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -94,10 +101,23 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
     buildTarget: Standalone
-    maxTextureSize: 2048
+    maxTextureSize: 128
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 128
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -107,10 +127,10 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
     buildTarget: WebGL
-    maxTextureSize: 2048
+    maxTextureSize: 128
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -122,89 +142,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Luffy_DownScale_0
+      name: luchador-walk-right_0
       rect:
         serializedVersion: 2
-        x: 61
-        y: 257
-        width: 128
-        height: 236
+        x: 0
+        y: 0
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: cccd1ebb692539bc0800000000000000
-      internalID: -3777584855083000628
+      spriteID: de1f3c523be63f2a0800000000000000
+      internalID: -6704893704512736787
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Luffy_DownScale_1
+      name: luchador-walk-right_1
       rect:
         serializedVersion: 2
-        x: 311
-        y: 257
-        width: 128
-        height: 236
+        x: 16
+        y: 0
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e4e5f0f3b2acea360800000000000000
-      internalID: 7182900742792896078
+      spriteID: 6ef0bcd86c2ab9750800000000000000
+      internalID: 6312818276356001766
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Luffy_DownScale_2
+      name: luchador-walk-right_2
       rect:
         serializedVersion: 2
-        x: 61
-        y: 7
-        width: 128
-        height: 236
+        x: 32
+        y: 0
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e9e0b6d29cc22db70800000000000000
-      internalID: 8922243054336413342
+      spriteID: 95368597cc891d190800000000000000
+      internalID: -7939396664100887719
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Luffy_DownScale_3
+      name: luchador-walk-right_3
       rect:
         serializedVersion: 2
-        x: 312
-        y: 8
-        width: 126
-        height: 234
+        x: 48
+        y: 0
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 506d022dc7d3ad870800000000000000
-      internalID: 8708340435784881669
+      spriteID: 33b61af3c74774c50800000000000000
+      internalID: 6649411451828136755
       vertices: []
       indices: 
       edges: []
@@ -213,7 +233,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 972a54b6a9b9d2644a06b85d17588247
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -223,10 +243,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Luffy_DownScale_0: -3777584855083000628
-      Luffy_DownScale_1: 7182900742792896078
-      Luffy_DownScale_2: 8922243054336413342
-      Luffy_DownScale_3: 8708340435784881669
+      luchador-walk-right_0: -6704893704512736787
+      luchador-walk-right_1: 6312818276356001766
+      luchador-walk-right_2: -7939396664100887719
+      luchador-walk-right_3: 6649411451828136755
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
