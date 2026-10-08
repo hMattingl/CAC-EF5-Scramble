@@ -23,13 +23,17 @@ public class QTEBarEvent : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (score < 10)
+        {
             if (Keyboard.current.spaceKey.wasPressedThisFrame && targetScriptReference.inArea == "true")
             {
                 score += 1;
 
                 Debug.Log($"{score} Point(s)");
-                Debug.Log($"Speed: {movementInput}");
-                movementInput *= 1.15f;
+                if (score <= 2)
+                {
+                    movementInput *= score;
+                }
             }
             else if (Keyboard.current.spaceKey.wasPressedThisFrame && targetScriptReference.inArea == "false")
             {
@@ -40,6 +44,7 @@ public class QTEBarEvent : MonoBehaviour
                     movementInput = Vector2.left;
                 else movementInput = Vector2.right;
             }
+        }
 
     }
 
