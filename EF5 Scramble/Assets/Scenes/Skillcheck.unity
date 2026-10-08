@@ -274,7 +274,7 @@ MonoBehaviour:
   defaultLayer:
     serializedVersion: 2
     m_Bits: 1
-  grabRadius: 1.6
+  grabRadius: 2
   targetScriptReference: {fileID: 1693756354}
   currentDirection: left
   inArea: notimportant
@@ -562,7 +562,7 @@ MonoBehaviour:
   defaultLayer:
     serializedVersion: 2
     m_Bits: 1
-  grabRadius: 1.6
+  grabRadius: 2
   targetScriptReference: {fileID: 1693756354}
   currentDirection: left
   inArea: notimportant
