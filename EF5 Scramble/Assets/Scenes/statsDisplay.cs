@@ -17,7 +17,13 @@ public class statsDisplay : MonoBehaviour
     
     private void Start()
     {  
-        fear = 0;    
+        
+        fear = 0;
+        timePased = 0;
+        hour = 1; 
+        randomEvents.hourReset();
+        Radiothings.hourReset();
+
     }
 
     // Update is called once per frame

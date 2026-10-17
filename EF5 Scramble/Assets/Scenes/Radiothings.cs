@@ -18,6 +18,17 @@ public class Radiothings : MonoBehaviour
     void Start()
     {
         doneRadio = false;
+
+        if(StaticData.keepRadio >= 1)
+        {
+            hasRadio = true;
+        }
+
+        if(hasRadio == false)
+        {
+            radio.gameObject.SetActive(false);
+            radioButton.gameObject.SetActive(false);
+        }
     }
 
 
