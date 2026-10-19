@@ -127,7 +127,7 @@ public class ColliderTest : MonoBehaviour
         int dataChild = ChildNum();
         StaticData.keepChild = dataChild;
         int dataRadio = RadioNum();
-        StaticData.keepRadio = dataChild;
+        StaticData.keepRadio = dataRadio;
         int dataFlash = FlashLNum();
         StaticData.keepFlashlight = dataFlash;
         int dataBoard = BoardGNum();
