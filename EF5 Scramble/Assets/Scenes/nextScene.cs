@@ -8,8 +8,6 @@ public class nextScene : MonoBehaviour
     public void LoadSceneByName(string name)
     {
 
-        
-        
         SceneManager.LoadScene(name);
      
     }
